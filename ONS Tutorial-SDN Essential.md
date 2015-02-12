@@ -1,5 +1,5 @@
 # ONS Tutorial - SDN Essential
-tutorial-day1, by Saurav Das
+tutorial-day1
 
 ## Introduction
 - traditional: distributed logic, all-in-one (app, os, )
