@@ -1,14 +1,5 @@
 # Network Operating Systems
 
-Questions to Larry:
-- Why do we need ONOS? What is our problem need to solve? 
-- Why do we need Virtex? Can I just use standard Hypervisor + (ONOS or even just Linux)? to reduce complexity of stack.
-- How ONOS/Virtex related to OpenStack? They have Neutron plugin now, when the both exist to solve our problem?
-- Who else is this space?
-- If we have to make decision today, what issue will hold us back of using ONOS and Virtex?
-
-write my own answer send it after the discussion.
-
 From [wikipedia]
 Network operating system refers to software that implements an operating system of some kind that is oriented to computer networking. For example, one that runs on a server and enables the server to manage data, users, groups, security, applications, and other networking functions.[1] The network operating system is designed to allow shared file and printer access among multiple computers in a network, typically a local area network (LAN), a private network or to other networks.
 
@@ -62,7 +53,6 @@ Most of tutorial can be found at [onosproject wiki]
 [downloads]: https://wiki.onosproject.org/display/ONOS/Downloads
 [ONOS docker container]: https://registry.hub.docker.com/u/ywang1007/onos-buildenv/
 [ONOS from Scratch]: https://wiki.onosproject.org/display/ONOS/ONOS+from+Scratch
-
 
 ## OpenVirtex
 

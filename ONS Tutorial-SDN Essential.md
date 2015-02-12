@@ -1,79 +1,89 @@
-# ONS Tutorial - SDN101
-## SDN Essential
-by Saurav Das
+# ONS Tutorial - SDN Essential
+tutorial-day1, by Saurav Das
 
-- traditional: distributed, all-in-one
-- new: separate data (1 to n) and control (1 to m)
+## Introduction
+- traditional: distributed logic, all-in-one (app, os, )
+- new approach: separate data (may be 1 to n) and control (1 to m), centralized control
 - logic/control will be outside of switch => NOS + Apps
-- switch still needs OS, but lighter weight
+- switch still needs OS for forwarding, but lighter weight 
 
-Slide - Trend
-computer industry -> virtualization layer
-network industry -> virtualization/slicing 
+**Trend**
+we can learn from computer industry;
 
-Data Plane Abstraction
-OSI layer - separation of concern
+- computer industry -> virtualization layer
+- network industry -> virtualization/slicing 
+
+We have Data Plane Abstraction, i.e. OSI layer - separation of concern. But not in control plane.
+
+Open Shortest Path First (OSPF) is a routing protocol for Internet Protocol (IP) networks. It uses a link state routing algorithm and falls into the group of interior routing protocols, operating within a single autonomous system (AS).
 
 ### Where is Control Plane Abstraction
-Topology
-Routing
-![control plane abstraction]
+We need Topology and Routing abstrction. Control protocol is based on different header info.
 
+![Contro Protocol]
 
-
-[control plane abstraction]:https://www.evernote.com/shard/s302/sh/2cd7ded8-dd80-409a-8ab2-ff9b90abedd6/3b9e70100beeecd0c0b0e3e008439049
-
-
+[Contro Protocol]:http://note.io/1CYPMp5
 
 #### Flow Abstraction
-special protocol -> match-action table
-
-
+old method: special protocol -> match-action table
 Definition of flow changes, classification
 
-[flow abstraction]:https://www.evernote.com/shard/s302/sh/fcfd63eb-6b5f-44b8-b19e-e6cee68710db/e0a129ef90a7c9e74d60b1c6817c4f3f
+![flow abstraction]
 
-configuration is more static, control and forwarding is run-time
+Open flow uses a pattern
+
+![openflow pattern]
+
+which can be improved with rule engine.
+
+configuration is more static; control and forwarding is run-time
 configuration is parameter for instantiation
+
+[flow abstraction]:http://note.io/1zZM76B
+[openflow pattern]:http://note.io/1zZOHtt
 
 #### State Distribution Abstraction
 The apps about global abstraction only have to deal the global graph view
 
 ![state abstraction], treat flow as different table for different type of switch, and treat/map state to graph 
 
-[state abstraction]:https://www.evernote.com/shard/s302/sh/1aaea5ae-6571-486f-8b8a-8c4c4070bf3c/83e7a0a3088c34ac93e973127399d703
+[state abstraction]:http://note.io/1zZQE9c
 
 ### Protocol
-think protocol as program
+
+**think different**
 Protocol -> think -> Program
 Hardware -> think -> Software
 Standard -> think -> Evolution
 Close -> think -> Open
 
-
 Currently, there is no control layer in DC. Content network is different from inter-DC network. Using overlay to migrate to new technology, easier and cheaper.
 
-## OpenFlow
+### OpenFlow
 
-![Interfaces are the realizatio of abstraction]
+![Interfaces are the realization of abstraction]
 
 Depend on the item to match, device looks like certain type
 Reactive pattern requires reaching control for flow table.
 
 Usually Proactive + Reactive packet processing
 
-[Interfaces are the realizatio of abstraction]:https://www.evernote.com/shard/s302/sh/f3b33bad-bdda-4beb-b27b-14ec5632fc0a/329b83d45f2a99d99fdad8e1a631a8ec
+[Interfaces are the realization of abstraction]:http://note.io/1zZSxme
 
 ## SDN Switches
-initially:
-Default off network 
-Centralized policy
-Dumb switch
+Initial approach, version 1.0:
+- Default off network 
+- Centralized policy
+- Dumb switch
 
 Open flow defines 3 things
 - state: match
 - behavior: action
 - interface: controller <-> switch
+
+![open flow]
+
+[open flow]:http://note.io/1zZUmj4
 
 #### Issue 1
 table is too small
@@ -88,7 +98,10 @@ limited match options
 #### Issue 4
 limited forwarding options
 
-[version support different functions]:https://www.evernote.com/shard/s302/sh/50eca703-0004-42da-841f-e12207d48dc4/21cead53edc20f07a3f833687d81df45
+### New Release
+![version support different functions]
+
+[version support different functions]:http://note.io/1zZV6EV
 
 Should basic on version 1.3+
 
@@ -100,7 +113,7 @@ Chain tables together
 
 ![multiple tables]
 
-[multiple tables]:https://www.evernote.com/shard/s302/sh/824a09c2-adeb-4938-ab00-8db664807666/cd9336a282f62786292fe747d844dd4c
+[multiple tables]:http://note.io/1zZVFP2
 
 ### Group
 simplified the logic for broadcast, redirect due to failure, 
@@ -139,29 +152,39 @@ packet actually forwarded
 
 **Don't use hybrid switch**
 
-Use whitebox from ODM vendors (Quanta, Accton, Celestica, Delta, Dell)
+Use [whitebox] from ODM vendors (Quanta, Accton, Celestica, Delta, Dell)
 visit OpenCompute.org to know more about whitebox
 Cumulux has figure about cost saving on their blog.
+![whitebox]
+
+[whitebox]:http://note.io/1zZWibe
 
 ## Controller 
-controller <=> Network OS
-ONOS is one of them.
+People use the term controller <=> Network OS, inter-changable.
+ONOS is one of them, ODL is another. 
 
 SDN controllers evolution to multi-master (cluster) fan out.
 Controller plane is better done in software, data plane is maybe.
 
+early stage: Single instance
+
 ### Basic functions
-- default path compute
-- reachability
-- topology
-- discovery
+
+- default path compute, 
+- topology, build graph and state
+- calculate reachability, location
+- discovery - to create initial topology
+
+- communication with hardware via southbound API (openflow)
+- run apps, and communication with apps via northbound
 
 HA
-- one switch can different master from others
+- one switch can have different master from others
 - Zookeeper uses (? protocol)
 
 ### Other Consideration of SDN Controller
 #### Visibility & Configuration
+
 - CLI
 - GUI
 - Orchestration, OpenStack can serve the purpose
@@ -185,18 +208,87 @@ NetOS functions
 
 ![NetOS functions]
 
-[NetOS functions]:https://www.evernote.com/shard/s302/sh/2f1aa75d-be6e-42b7-b35b-7c2b46889352/226004e31861021799cd44959abbd0d4
+[NetOS functions]:http://note.io/1Dl4g0W
 
 *SDN gives operators choices*
 
 There is big discussion about scale, which is dependent on the state sharing. We should keep config sync. The decision in one instance should not dependent on other instance. 
 
+![Single Instance and Multiple Instance] Controllers, this may not be the best way. reference only.
 
-![Single Instance] vs 
-![Multiple Instance] Controllers
+[Single Instance and Multiple Instance]:http://note.io/1CiMWIB
 
-[Single Instance]:https://www.evernote.com/shard/s302/sh/bcbe9895-bfda-49f4-bb9c-3d3fe4da7bf3/db63a66e5d84f1f3c756244a3ed14108
+## SDN in Action
 
-[Multiple Instance]:https://www.evernote.com/shard/s302/sh/5835c30a-8441-4916-9572-3f0e2c9598e3/7352f1b72215eec5954e694bf40cdb4f
+Tridon needs to support MPLS, otherwise it will not work.
+Source packet routing
+
+P-router core uses label, 
+PE-edge uses IP
+
+Use mininet to emulate topology
+sh links
+sh routers
+sh sw xxx table ip
+sh sw xxx group
+sh sw xxx group mpls
+sh switch 0
+sh router xxx port
+
+config 
+sh policy
+sh sw xxx table acl
+
+## Application
+### Production Use
+#### Multi-Tenant Cloud DataCenter
+- connectivity
+- tenant isolation
+
+Problem
+- Traditional uses VLan.
+- Hard to config and manage
+
+##### Network Virtualization 
+	= Isolation + Programmability
+Address Space Isolation
+Performance Isolation
+Connectivity Isolation
+
+![DC virtualization]
+
+[DC virtualization]:http://note.io/1CiOwdA
+
+##### Programmable Connectivity/Services
+
+where is it deployed?
+Nicira (vmware)
+Contrail,Nuage, 
+
+#### WAN Network
+old way-only has local view
+
+Software Defined WAN TE, Google's approach.
+
+![Google approach]
+
+[Google approach]:http://note.io/1CiQwm2
+
+#### Traffic Monitoring
+
+### Other Use
+- IP network over Transport network
+- LTE & IP RAN
+- Router Replacement, Pica8, IPTV router multi-cast, 
+- Security, from HP, intercept DNS request, SDN uses dynamic
+- Fabrics for Clouds, Big-Data and NFVI
+
+## Thinking Different
+- new choice, choose carefully
+- automation (orchestration) != programmability (change behavior)
+- L2 and L3 are still the same for underlay, we add some overlay to change networks.
+- Benefit review (separate of data and control, simplicity, programmability, low capex, low opex)
+
+
 
 
