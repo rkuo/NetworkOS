@@ -1,6 +1,9 @@
 # Wireshark
 
 ## Introduction
+* [Overview](http://wiresharkdownloads.riverbed.com/video/wireshark/introduction-to-wireshark/)
+* [Wireshark main site](https://www.wireshark.org/)
+* [Sample Capture](https://wiki.wireshark.org/SampleCaptures) and [Publicly available PCAP files](http://www.netresec.com/?page=PcapFiles)
 
 ## Tutorial
 * [Introduction to Wireshark (Part 1 of 3)](https://www.youtube.com/watch?v=NHLTa29iovU)
@@ -22,12 +25,20 @@ This allows us to start FF without sending any request.
 	* Webserver also received information for web form, such as password. Heaton Research also provides a [test page](http://www.httprecipes.com/1/2/forms.php) for learning the capture the data from a form.  
 	* User's data is `post` via a form, including password. It is hard to read the information at the bottom of the Wireshark. A easy way is Analyze > Follow TCP Stream; a separate window will pop up. ![capture data in form](http://note.io/1NNcSlW) 
 	
-* [Data Mining using Wireshark (Part 3 of 3)](https://www.youtube.com/watch?v=2R1DRnu5CxQ) to download Youtube contents
-	*  
+* [Data Mining using Wireshark (Part 3 of 3)](https://www.youtube.com/watch?v=2R1DRnu5CxQ) to download Youtube contents. *skip this, looks like protocol changed*
 
+## Configuration
+[Intro and about the Wireshark environment with Hansang Bae](https://www.youtube.com/watch?v=U0QABcTD-xc)
+	* Edit > Preferences > User Interfaces > Columns
+	Click Add > Select Type from drop down > Apply, then re-arrange the order of columns.
+	![add columns](http://note.io/1x0sldk)	
+	* Various configuration can be grouped a profile. 
+	Edit > Configuration Profiles > Add
+	* We can add any attribute in middle panel as column by right click the field and select Apply as Column.
 
 * Read Wireshark Output
 	* [How to read Wireshark Output](https://www.youtube.com/watch?v=-aTGL4M0db4)
 
-
+	Download file from repository, then open the file. 
+	![sample pcap file](http://note.io/1MwJQ8w)
 

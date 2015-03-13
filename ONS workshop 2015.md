@@ -21,7 +21,7 @@ Edge to edge requirement
 ### Common Framework 
 
 Learning from Map-Reduce
-Hand plocy DAG
+DAG
 Create an instance graph
 Scale up/down depending on load
 Failure, need HA, rollback, 
