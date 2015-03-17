@@ -4,6 +4,8 @@
 * [Overview](http://wiresharkdownloads.riverbed.com/video/wireshark/introduction-to-wireshark/)
 * [Wireshark main site](https://www.wireshark.org/)
 * [Sample Capture](https://wiki.wireshark.org/SampleCaptures) and [Publicly available PCAP files](http://www.netresec.com/?page=PcapFiles)
+* [Wireshark Quick-Start Guide](http://www.eecs.yorku.ca/course_archive/2011-12/W/3214/getting_started.pdf)
+* [Cheatsheet](http://packetlife.net/media/library/13/Wireshark_Display_Filters.pdf)
 
 ## Tutorial
 * [Introduction to Wireshark (Part 1 of 3)](https://www.youtube.com/watch?v=NHLTa29iovU)

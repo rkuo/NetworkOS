@@ -127,12 +127,7 @@ mininet>
 
 ### Wireshark
 #### Tutorial
-- [The Ultimate Wireshark Tutorial](https://www.youtube.com/watch?v=Lu05owzpSb8)
-- [Wireshark Walkthrough](http://mininet.org/walkthrough/#start-wireshark)
-
-### tcpdump
-#### Tutorial
-
+* [my Wireshark study notes](https://github.com/rkuo/LearningNetworkOS/blob/master/Wireshark.md)
 
 ### OpenFlow
 #### Tutorial
