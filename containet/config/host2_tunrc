@@ -1,0 +1,16 @@
+#!/bin/bash
+# Docker Bridge Configuration
+export BRIDGE_NAME='docker0'
+# Assign bridge address
+export BRIDGE_ADDRESS='172.15.42.2/24'
+# Container Addresses
+export SUBNET='172.15.42.0/24'
+
+# OpenvSwitch Configuration
+export OVS_BRIDGE='br0'
+# Configure tunnel interface name
+export TUN_IF='gre0'
+# Configure tunnel type between two hosts
+export TUN_TYPE='gre'
+# Remote host address
+export REMOTE_IP='10.0.0.3'

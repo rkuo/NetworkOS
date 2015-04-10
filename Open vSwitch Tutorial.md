@@ -1,12 +1,15 @@
 # Open vSwitch Tutorial 
 
 ![OVS Internal]
-![OVS Architecture]
-
-[OVS Internal]:http://habrastorage.org/getpro/habr/post_images/36e/0d4/a75/36e0d4a750bc21203d31d71df85f0891.jpg
 from [architecture](http://habrahabr.ru/company/webzilla/blog/124310/)
 
+![OVS Architecture]
+![DB schema]
+
+[OVS Internal]:http://habrastorage.org/getpro/habr/post_images/36e/0d4/a75/36e0d4a750bc21203d31d71df85f0891.jpg
+
 [OVS Architecture]:http://note.io/1Fu7iRQ
+[DB schema]:https://virtualandy.files.wordpress.com/2013/04/vswitch-schema.png
 
 ## Tutorial - Lab (using sdnhub vm, OVS 2.3.90)
 
@@ -433,3 +436,4 @@ status              : {driver_name="e1000", driver_version="7.3.21-k8-NAPI", fir
 
 ## References
 * [http://git.openvswitch.org/cgi-bin/gitweb.cgi?p=openvswitch;a=blob;f=PORTING](http://git.openvswitch.org/cgi-bin/gitweb.cgi?p=openvswitch;a=blob;f=PORTING)
+
