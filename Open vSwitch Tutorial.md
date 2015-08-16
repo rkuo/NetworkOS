@@ -316,6 +316,7 @@ ubuntu@sdnhubvm:~[01:33]$
 Port can have multiple interfaces and can be used to create bond. We will connect them to 2 vms. 
 
 **Like the first trial, I did not get this part to work**, it is possible I used wifi, not eth0. After I did more investigation, the bridge is up, but there is no ip address in my exercise. 
+**Update** bridge need to be created in VirtualBox Manager and added to VM setting before launching VM. After VM is up, we need to do modify /etc/network/interface file by adding `auto eth1` and eth1 dhclient??.
 
 I will use screenshot as reference.
 ![connect vm1 vm2](http://note.io/1HTXLCZ)

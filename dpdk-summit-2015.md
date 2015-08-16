@@ -1,9 +1,13 @@
 ## DPDK Summit 
 SFan, 17.08.2015 
 
-### Key Notes
-???
+This is a short meeting notes to share. I append some of my DPDK study note after line break.
 
+### Key Notes
+
+
+---
+***
 ### Background
 Excerpt from report - [A Look at Intel’s Dataplane Development Kit][3]
 
@@ -33,6 +37,22 @@ Afterwards the packet gets passed to the transmitting part of the network stack,
 * First of all the driver has to load the packet descriptor, which holds the location of the *sk_buff* in main memory, into the transmitting ring buffer (10). 
 * Afterwards he tells the NIC that there are packets available and ready to send (11). Secondly the NIC has to inform the CPU via an interrupt that the *sk_buff* structure can be deallocated.
 
+#### Call Flow Comparison between Linux and DPDK
+From [Understand DPDK][0]
+
+![Packet Process in Linux][7]
+![Packet Process in DPDK][8]
+
+Performance improvement is from:
+
+* Processor affinity (separate cores) 
+* Huge pages (no swap, TLB)
+* UIO (no copying from kernel)
+* Polling (no interrupts overhead)
+* Lockless synchronization (avoid waiting) 
+* Batch packets handling
+* SSE, NUMA awareness
+
 #### Libraries
 
 ![DPDK Major Components][5]
@@ -50,12 +70,23 @@ which are stored in memory pools for fast, efficient cache-aligned memory alloca
 #### Compare to Other Frameworks
 ![compare][6]
 
+#### Use DPDK
+
+* [Step by Step][9]
+* [Get rep from github][10]
+* [Visit documentation site][11]
+
 [References]:
+[0]:http://www.slideshare.net/garyachy/dpdk-44585840?related=1
 [1]:https://haryachyy.wordpress.com/
 [2]:http://www.intel.com/content/dam/www/public/us/en/documents/solution-briefs/communications-packet-processing-brief.pdf
 [3]:http://www.net.in.tum.de/fileadmin/TUM/NET/NET-2014-08-1/NET-2014-08-1_15.pdf
 [4]:https://www.evernote.com/l/AS4Z2_f2FaVFjJvH-UcTxNDB2jcp_Y_QkTUB/image.png
 [5]:https://www.evernote.com/l/AS56rLXtZGRINLkaRhRZeVMas8BKHfMtpkIB/image.png
 [6]:https://www.evernote.com/l/AS5Z0bPy4TxL_Yaqf56SNUGLb-J-vBzLe-8B/image.png
-
+[7]:https://www.evernote.com/l/AS4bGlVH3jBEzaBsQRKfBvuUMxMVi3_0iZ8B/image.png
+[8]:https://www.evernote.com/l/AS5AwBUd5QtFHYTn3x2PJqlYIWYFdHSVlXoB/image.png
+[9]:http://www.slideshare.net/hisaki/intel-dpdk-step-by-step-instructions
+[10]:http://dpdk-org.github.io/dpdk/
+[11]:http://dpdk.org/
 
