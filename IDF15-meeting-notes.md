@@ -1,7 +1,6 @@
 # IDF15
 
-* [IDF Website][1]  
-* Agenda is a single page application, all slides are listed [here][2], use session number to filter the slide.
+[IDF Website][1] Agenda is a single page application, all slides are listed [here][2], use session number to filter the slide.
 
 ### Key Notes
 Intel, Brian Krzanich, CEO
@@ -21,7 +20,7 @@ Intel, Brian Krzanich, CEO
 	* action -> robots, ROS (Robot OS)
 	
 * smart and connected -> interface with mobile devices.
-	* robot serves as butler.It needs real-time sensing.and response. 
+	* robot serves as butler. It needs real-time sensing and response. 
 	* Game -> PC Game is feeling, which requires computing power. 
 	iRacing, Razer (camera), twitch is gaming platform.
 	* Memomi -> Mirror input for fashion comparison, shopping experience.
@@ -36,10 +35,10 @@ Intel, Brian Krzanich, CEO
 	* BMX sensors on bike 		
 	
 * Intel IQ 
-more software Kits (body iq, social iq, time iq, indentity iq)
+more software Kits (body iq, social iq, time iq, identity iq)
 Q4 will release for Curie
 
-* enterprise weaables to solve the password problem, auto-unlock
+* enterprise wearables to solve the password problem, auto-unlock
 * blue tooth, low energy sercie
 * this can also be part of building facility management.
 * Makers' fair competition
@@ -102,7 +101,7 @@ There are opportunities of performance improvement in host to VM and VM to VM co
 Jason Hoffman, Head of Cloud Technology, Ericsson, 
 
 * This session is recorded. It is more a marketing session than technology. 
-* Software as an Infrasture, we can view Data Center as new factory. We a configurable DC which allows us to adapt the business evolution.
+* Software as an Infrastructure, we can view Data Center as new factory. We a configurable DC which allows us to adapt the business evolution.
 * **Hyper Scale Clouds**, efficiency comes from managing the different workload profile.   
 
 Alex Jinsung Choi, SK Tlecom
@@ -131,13 +130,13 @@ Need a team to build a system.
 
 ![concerns are different from scope, domain, and sensor condition][5]
 
-* This slide highlights the difference between them. **If the session is recorded, listen it again.**
+* This slide highlights the difference between them. **If the session is recorded, listen it again**
 * Understand the use-case during the life cycle of sensor installation is important.
 * Real-time event collection and analysis is important, all data collection needs to have timestamp.
 
 EnerNet for smart metering.
 Energy conservation is still, if it is more, important in data center, node.
-Galileo and Edison development kit as starting point.
+Use Galileo and Edison development kits as starting point.
 
 ---
 
