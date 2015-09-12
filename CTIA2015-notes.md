@@ -1,21 +1,3 @@
-It is a very productive trip.
-
-I found out what RedHat and Ericsson's offers in SDN/NFV space, 
-
-* Ericsson - Apcera, Ericsson NFV ecosystem, 6000 series equipment, 
-* Redhat - Affirmed, Redhat Enterprise System supporting NFV.
-
-also learned many other components that related to Domain 2.0, such as,
-
-* components for building Wireless Network physical infrastructure, how do they effect virtualization.
-* Internet of Things that connected to network, 
-* Digital life, connected cities and connected cars; which drive the wireless network SDN/NFV design requirements. many requirements are non-technical.
-
-A brief summary link >>>>>>
-
-== separate email/file here ==
-
-
 #### Ericsson
 
 * [Apcera](https://www.apcera.com/) is working with Ericsson to containerize NFV functions, which are currently in the VM format.
