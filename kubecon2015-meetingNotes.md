@@ -1,20 +1,3 @@
-This is very productive and informative conference. I am glad I did notes sharing session, which forced me to do some homework and help me to be ready for this meeting. About 50% of presentations were on stage demo and coding. This is a short summary:
-
-* Kubernetes has pod and labeling concept which simplifies the service development and deployment. Kubernetes is more in service orchestration than container management.
-* Kubernetes only supports container; this is not enough for general enterprise applications, which requires the support for VM, bare-metal and lagacy applications. Mesos can fill this gap, and Kubernetes can be installed on top Mesos. Kubernetes works with Openstack too.
-* Container networking is still a weak link of Kubernetes. Currently, the best tool to connect container is OpenContrail, which provides same approach for VM, Container and Bare-metal. OpenContrail has a plugin for Kubernetes. 
-* Docker just had new Docker release 1.9 and their tools: Swarm, Machine, Compose, and Network. This will speed up more development tools that combines Kubernetes for app deployment.
-
-A random meeting notes: ??
-
-Kubernetes is only a part of container ecosystem, a container management overview meeting is scheduled on??? 
-
-
-
-
-
-
-
 # Kubecon 2015 meeting notes
 rtk, 20151109 at SF
 
@@ -51,7 +34,7 @@ Future direction:
 
 Plan for v1.2  
 
-* pre-application
+* pre-built applications
 * Deis annouces Helm, github.com/deis/helm
 * manage multiple clusters, openUX
 * simplify config, simple config -> kubenetes object
@@ -61,7 +44,7 @@ Even Brown, Google
 
 **Discovery & Operation**
 
-* farmer --> buildlet* 
+* farmer creates --> multiple buildlet 
 * Discovery, google.defaultclient
 * find out jq command.
 * Use kubectl exec to get into container,
@@ -127,7 +110,7 @@ Demo
 * process and resource
 * Mesos manage: frameworks
 
-## Panel
+## Panel Discussion
 5 people from Google
   
 * realized the container will be the mainstream two years ago.
@@ -376,7 +359,7 @@ ContainerBuddy: registration to consul on startup, self defined health check
 
 Not dependent on orchestration.
 
-## Panel
+## Panel Discussion
 
 * mass innovation in progress, 
 * merge Google app engine and cloud compute -> container and kubernetes
@@ -387,7 +370,7 @@ Not dependent on orchestration.
 * what are the oppinions need to relax or to enforce -> allow flexiblity to connect,  operational specialization. centralized policy with local override.  
 
 ## Stupid Ideas for Many Computers
-Aja Hammerly, Google  <<crazy, not everyone works in Google, has computing resource to waste, statement complete fall apart. snub!
+Aja Hammerly, Google  <<crazy, not everyone works in Google, has computing resource to waste, statement complete fall apart. **snub!** Make sure I do not it.
 
 * sentiment analysis: hard to use words only, Emoji, is not deterministic << consider fuzzy logic
 * Linda (distribute Tuple)
@@ -536,7 +519,7 @@ Kelsey Hightower, Google  <<very good, learn from him
 ### Fabric8  
 [presentation slides](http://christianposta.com/slides/kubecon/generated/talk.html#/cover)
 
-* focus on services, what effects and how to deliver the services?
+* focus on services, what effects the deliver the services?
 * Balance efficiency and flexibility
 * organization needs to be structured to deliver the service
 
@@ -597,33 +580,19 @@ Platforem is like shopping mall, which has basic structure and utilities, to hos
 * Chaos monkey
 
 ### Fabric8.io
-* osgi can still exist with Docker/Kubernetes.
-* visualizations of kubernetes via web console
+* osgi can co-exist with Docker/Kubernetes.
+* nicer visualizations of kubernetes via web console
 * built-in chaos monkeys
 * prepackaged apps (1 click CI/CD, API, logging)
 
 learn to use ohawt.io << general web io for many apps
 
-There is a Docker maven plugin to assist the build, watcg, apply,...
+There is a Docker maven plugin to assist the build, watch, apply,...
 
 gogs:
 gogsadmin	
 RedHat$1
 gogsadmin@fabric8.local
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Vendors
@@ -633,4 +602,5 @@ Questions for:
 - Redhat, find out jBoss training about Fuse - Done
 - Mesos, talk to Karl about self-healing, why both - Done
 - Sysdig, review their demo to speedup learning - Done
-- jBoss and OpenContrail workshop - Done
+- jBoss - Done 
+- OpenContrail workshop - Done
