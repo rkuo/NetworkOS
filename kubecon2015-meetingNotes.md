@@ -6,8 +6,7 @@ rtk, 20151109 at SF
 ## Day 1 Keynote-Roadmap  
 Brendan Burns, Google, roadmap   
 
-* started one year before
-* purpose of this project: 
+* Kubernetes started one year ago, the purpose of this project: 
 	* to deploy apps easier, 
 	* resilence to change, 
 	* be able to handle scaling, 
@@ -370,7 +369,7 @@ Not dependent on orchestration.
 * what are the oppinions need to relax or to enforce -> allow flexiblity to connect,  operational specialization. centralized policy with local override.  
 
 ## Stupid Ideas for Many Computers
-Aja Hammerly, Google  <<crazy, not everyone works in Google, has computing resource to waste, statement complete fall apart. **snub!** Make sure I do not it.
+Aja Hammerly, Google  <<crazy, not everyone works in Google, has computing resource to waste, statement complete fall apart. **snobbery!** Make sure I do not it.
 
 * sentiment analysis: hard to use words only, Emoji, is not deterministic << consider fuzzy logic
 * Linda (distribute Tuple)
@@ -589,11 +588,51 @@ learn to use ohawt.io << general web io for many apps
 
 There is a Docker maven plugin to assist the build, watch, apply,...
 
-gogs:
-gogsadmin	
-RedHat$1
+gogs:  
+gogsadmin/RedHat$1  
 gogsadmin@fabric8.local
 
+vagrant login: admin/admin
+
+## Open Contrail
+Pedro Marques, Sanju Abraham  
+Lachlan Evenson,   
+Aniket Daptari, Juniper    
+
+opencontrail.org
+
+* orchestration: specify the requirements in abstract manners.
+* controller creates network constructs, forwarding plane has vRouter. Each host has one vRouter.
+* need isolation on every host
+* need extend network across hosts
+* host may be bare-metal or VM, create overlay on top of physical network.
+
+create separate router for each host.
+virtual network can communicate with all vm on the same host, policy enforced at each host or pod.
+
+It is in Kernel, and has less 10% panelty.
+
+Use Cases: Symantec, Workday.
+
+* put Kube-proxy in Contrail. 
+* Pod can talk to host and another Pod.
+* vRouter Agent is container too. 
+
+Components:  
+Virtual Networks -> Network Policy -> Gateway Devices
+
+Network is defined by app developer, use "uses"
+
+[Demo](https://github.com/juniper/kubernetes/blob/opencontrail-integration/docs/getting-started-guides/opencontrail.md)
+[blog](https://pedrormarques.wordpress.com/2015/07/14/kubernetes-networking-with-opencontrail/)
+[vagrant install](https://pedrormarques.wordpress.com/)
+
+kubot??
+
+use OpenContrail to federation control plane.  
+use ansible to bootstrap or use static pod
+
+Locust, on gce, load test
 
 ## Vendors
 Questions for:
