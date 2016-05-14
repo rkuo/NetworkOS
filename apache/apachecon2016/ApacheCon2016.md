@@ -86,11 +86,10 @@ FPGA is sit between Application Specific Integrated Chip (ASIC) and ?.
 
 * FPGA is used for off load some HLS tasks; Most of FPGA has its own board. This project tries to virtualize the FPGA: Intel's Altera and [IBM's Xilinz][19].   
 * use OpenCL API + HLS    
+![development environment][22]
 * Put [FPGA in VM][20] like we do for NIC, we can have multiple FPGA in VM -> customized VM 
-   
-<insert slide leaf node with FPGA here>
-There are 10 times performance improvement over standard VM.  
-![development environment][21]
+* There are 10 times performance improvement over standard VM.  
+![performance increase][23]
 
 ### Dockerized Hadoop Platform and Recent Updates in Apache BigTop
 Yu-hsin Yeh from Trend Micro
@@ -117,7 +116,7 @@ Amir Sanjar from IBM
 ### Apache Zeppelin 
 Trevor Grant from market6
 https://trevorgrant.org/  
-[blog][2]   
+[blog for installation][2], good information, but use Vagrant is easier.   
 
 why?
 * version control   
@@ -140,14 +139,13 @@ krlohnes@us.ibm.com
 * easy to represent relationship (link) between entities (nodes)
 * scale better
 
-[Apache Tinkerpop] this is good subject but very bad presentation, not enough depth.
+[Apache Tinkerpop] this is good subject but very bad presentation, not enough depth, skip!!
 
 ## Day-2
 
 ### Apache Kafka 
 from Rocana,   
-**good info** further investigate this: compare this to event bus and message bus
-read [log what every shoftware engineer should know][3] and [tranformation][4]
+**good info** further investigate this: compare this to event bus and message bus and read [log what every shoftware engineer should know][3] and [tranformation][4]
 
 topic has partition, has single leader
 producers, brokers, consumers will deal distributed computing problems. see slides for details.
@@ -510,14 +508,13 @@ real-time composition, use
 [0]: http://events.linuxfoundation.org/
 [1]: http://openpowerfoundation.org/2015-summit/
 [2]: https://trevorgrant.org/2015/11/03/apache-casserole-a-delicious-big-data-recipe-for-the-whole-family/comment-page-1/#comment-2   
-[2]: http://blog.rocana.com/reliable-collection-from-log-files ????
 [3]: https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying
 [4]: http://www.slideshare.net/JoeyEcheverria/embeddable-data-transformation-for-real-time-streams
 
 [4]: http://druid.io/??????
 [5]: http://kylin.apache.org/assets/images/kylin_diagram.png
 [6]: http://bigtop.apache.org/   
-[7]: helio???? 
+[7]: https://github.com/spotify/helios
 [8]: https://drill.apache.org/
 [9]: http://events.linuxfoundation.org/events/apachecon-north-america/program/schedule
 [10]: https://zest.apache.org/
@@ -531,6 +528,11 @@ real-time composition, use
 [18]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141629.jpg
 [19]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141440.jpg
 [20]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141517.jpg
+[21]: http://blog.rocana.com/reliable-collection-from-log-files
+[23]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_142307.jpg
+
+
+
 
 
 
