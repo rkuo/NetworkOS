@@ -2,10 +2,9 @@
 Richard Kuo, May 9, 2016 at Vancouver
 
 ## Day-1
-
 ### Keynotes  
 **Netflix**    
-Dashboard for software development stage, a management view. 
+Having a dashboard for displaying all software development stage, a management view. We can learn this from open source foundation, like Apache, OpenStack, ... 
 Evolving, measure the info, learn, innovation, grow.
 
 **Big data in Enterprise**  
@@ -14,9 +13,15 @@ Luciano Resende, Spark Technology Center, IBM
 * Use Flink, Spark, ML, and Zeppelin leads to psudo Analytics Operating System (platform) <- define OS at SaaS level.
 * IBM Open Sourced Apache SystemML, Apache Quarks and    
 * bundled Spark with BrightInSight      
-<insert slide spark flow >   
-This architecture should be in series not in parallel, ETL at front and ETL process should learn from ML
+![ibm streaming architecture][15]   
+
+* comments: his architecture can be improved; 
+	* processes should be in series not in parallel, 
+	* ETL at front and ETL process should learn from ML. 
+	* Parsed datastream should be achived and process should be continueous. 
+	* If we use Flink, batch process branch will be eliminated.
 * Use cases: SystemML on Spark with HealthCare; Telecom with multiple channels, need a 360 degree view  
+* [SystemML][16] is "SystemML provides declarative large-scale machine learning (ML) that aims at flexible specification of ML algorithms and automatic generation of hybrid runtime plans ranging from single-node, in-memory computations, to distributed computations on Apache Hadoop and Apache Spark." 
 
 **IT takes a village (or ecosystems)**  
 Amy Gaskins  
@@ -26,6 +31,15 @@ Amy Gaskins
 	* Military: timing and urgency
 	* Healthcare Insurance Fraud: Gather the collective knowledge
 	* Commericalize OpenData: domain knowledge is critical
+Requirments for successful data analytics:
+* Buy-in
+	* high-level leadership was supportive
+	* mid-level converted
+	* lower levels wanted to help
+* urgency
+* Transparency
+* Non-data science SMEs
+* Psychological Safety 
 
 ### Apache Kylin 麒麟
 Intent: we need real-time streamming and OLAP for Big-Data.    
@@ -36,9 +50,12 @@ Do a search to compare Kylin to [Druid][4] later.
 * It mainly to use micro-batch, connect to Zeppelin for interface, also, Tableau, Excel, MS power BI.   
 * Data source (micro batch, micor cube )   
 * Data aggregation types (Hyperloglog count, topN, BitMap Precise count distinct (meituan.com), raw records(jd.com))   
-<insert roadmap>
-* side notes: There are many oversea activities in China too, they follow the progress very close and play major role too.   
-* Comment: Performance comes from cube data structure; star schema may not be the only solution. We want to build data flat during streaming and most of work are pushed to cluster.   
+![kylin roadmap][17]
+
+* side notes: 
+ 	* here are many oversea activities in China too, they follow the progress very close and play major role too.
+	* pay attention, Real-time streaming OLAP is coming, watch its use cases.   
+	* Performance comes from cube data structure; star schema may not be the only solution. We want to build data flat during streaming and most of work are pushed to cluster.   
    
 ### Migrating Pipelines into Docker
 from Spotify    
@@ -65,13 +82,15 @@ Eric Fukuda,.. from University of Toronto
 Referring to [Apache drill][8]    
 Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud Storage. 
 MS Bing improved 95% of its performance by using FPGA <- you can view it is programmable device   
-FPGA is sit between Application Specific Integrated Chip (ASIC) and ?  
+FPGA is sit between Application Specific Integrated Chip (ASIC) and ?.
 
-* FPGA is used for off load some HLS tasks; Most of FPGA has its own board. This project tries to virtualize the FPGA: Intel's Altera and IBM's Xilinz.   
+* FPGA is used for off load some HLS tasks; Most of FPGA has its own board. This project tries to virtualize the FPGA: Intel's Altera and [IBM's Xilinz][19].   
 * use OpenCL API + HLS    
-* Put FPGA in VM like we do for NIC, we can have multiple FPGA in VM -> customized VM 
+* Put [FPGA in VM][20] like we do for NIC, we can have multiple FPGA in VM -> customized VM 
+   
 <insert slide leaf node with FPGA here>
 There are 10 times performance improvement over standard VM.  
+![development environment][21]
 
 ### Dockerized Hadoop Platform and Recent Updates in Apache BigTop
 Yu-hsin Yeh from Trend Micro
@@ -106,12 +125,12 @@ why?
 * inline documentation  
 * easy for collaboration and across languages   
 
-Alluxio formally Tachyon in memory database
-GoogleViz
+* Alluxio formally called Tachyon in memory database
+* use R to access GoogleViz
 
-ResourcePools-memory pools, which allows data sharing from different interpreters, small dataset.
-Link paragraphs
-can be used for ETL 
+* ResourcePools-memory pools, which allows data sharing from different interpreters, small dataset.
+* Link paragraphs
+* can be used for ETL 
 
 3 Levels: [business analyst], [know python, statistic], [be able to do wierd stuff].
 
@@ -121,7 +140,7 @@ krlohnes@us.ibm.com
 * easy to represent relationship (link) between entities (nodes)
 * scale better
 
-[Apache Tinkerpop] this is good subject but very bad presentation.
+[Apache Tinkerpop] this is good subject but very bad presentation, not enough depth.
 
 ## Day-2
 
@@ -505,7 +524,14 @@ real-time composition, use
 [11]: http://unomi.incubator.apache.org/
 [12]: https://github.com/felixcheung
 [13]: https://apachecon2016.sched.org/event/6OJA/finagle-linkerd-and-apache-mesos-twitter-style-microservices-at-scale-oliver-gould-buoyant#
-[14]:https://github.com/BuoyantIO/linkerd
+[14]: https://github.com/BuoyantIO/linkerd
+[15]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_092951.jpg 
+[16]: https://systemml.apache.org/
+[17]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_111251.jpg
+[18]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141629.jpg
+[19]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141440.jpg
+[20]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141517.jpg
+
 
 
 
