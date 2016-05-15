@@ -43,7 +43,7 @@ Requirments for successful data analytics:
 
 ### Apache Kylin 麒麟
 Intent: we need real-time streamming and OLAP for Big-Data.    
-Do a search to compare Kylin to [Druid][4] later.
+Do a search to compare Kylin to [Druid][24] later.
   
 ![Kylin Architecture][5]
 
@@ -108,9 +108,6 @@ Integration with Docker Machine and Swarm (manage multiple docker machines, use 
 
 Prebuild docker images with BigTop, treat images are immutatable.
 
-### OpenPower
-Amir Sanjar from IBM
-
 [OpenPower][1] to have common architecture for various chips
 
 ### Apache Zeppelin 
@@ -159,9 +156,10 @@ Monitor the node, it will be difficult to catch up event.
 ### Apache Hive
 Alan Gates from Hortonworks
 
-shifted from SQL to traditional data warehousing problems
-added more backend, like Spark   
-created a new branch for new features (HPLSQL, HBase as metastore)
+* Current activities in general:
+	* shifted from SQL to traditional data warehousing problems
+	* added more backend, like Spark   
+	* created a new branch for new features (HPLSQL, HBase as metastore)
 
 * adding procedure SQL 
 	* Oracle and Teradata
@@ -191,7 +189,7 @@ Hive 2.0
 	
 ### Apache Eagle 
 user: eBay and PayPal
-too much marketing stuff, skip!!
+too much marketing stuff, skip!! crazy!
 
 ![Apache Eagle Architecture][5]   
 
@@ -510,8 +508,6 @@ real-time composition, use
 [2]: https://trevorgrant.org/2015/11/03/apache-casserole-a-delicious-big-data-recipe-for-the-whole-family/comment-page-1/#comment-2   
 [3]: https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying
 [4]: http://www.slideshare.net/JoeyEcheverria/embeddable-data-transformation-for-real-time-streams
-
-[4]: http://druid.io/??????
 [5]: http://kylin.apache.org/assets/images/kylin_diagram.png
 [6]: http://bigtop.apache.org/   
 [7]: https://github.com/spotify/helios
@@ -524,13 +520,13 @@ real-time composition, use
 [14]: https://github.com/BuoyantIO/linkerd
 [15]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_092951.jpg 
 [16]: https://systemml.apache.org/
-[17]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_111251.jpg
+[17]: ???
 [18]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141629.jpg
 [19]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141440.jpg
 [20]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141517.jpg
 [21]: http://blog.rocana.com/reliable-collection-from-log-files
 [23]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_142307.jpg
-
+[24]: http://druid.io/
 
 
 
