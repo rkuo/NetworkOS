@@ -107,7 +107,7 @@ Prebuild docker images with BigTop, treat images are immutatable.
 
 [OpenPower][1] to have common architecture for various chips
 
-### Apache Zeppelin 
+### Apache Zeppelin    
 Trevor Grant from market6
 https://trevorgrant.org/  
 [blog for installation][2], good information, but use Vagrant is easier.   
