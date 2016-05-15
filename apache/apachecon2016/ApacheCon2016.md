@@ -138,18 +138,18 @@ krlohnes@us.ibm.com
 
 * easy to represent relationship (link) between entities (nodes)
 * scale better
+* based on Apache Tinkerpop
 
-[Apache Tinkerpop] this is good subject but very bad presentation, not enough depth, skip!!
+**this is good subject but very bad presentation, not enough depth, skip!!**
 
 ## Day-2
-
 ### Apache Kafka 
 from Rocana,   
 **good info** further investigate this: compare this to event bus and message bus and read [log what every shoftware engineer should know][3] and [tranformation][4]
 
-topic has partition, has single leader
-producers, brokers, consumers will deal distributed computing problems. see slides for details.
-Kafka support the consistency across multiple nodes, default to AP, but can be configured to CP
+* topic has partition, which has single leader
+* producers, brokers, consumers will deal distributed computing problems. see slides for details.
+* Kafka support the consistency across multiple nodes, default to AP, but can be configured to CP
 Review logstaching.
 <insert architecture flow diagram here> 
 
