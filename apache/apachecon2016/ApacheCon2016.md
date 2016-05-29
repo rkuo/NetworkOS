@@ -27,19 +27,19 @@ Luciano Resende, Spark Technology Center, IBM
 Amy Gaskins  
 
 * Apply Big-data to various Use Cases: Military, Large Corp, gov agency; related to the factors for Big-data project management 
-	<insert requirements pic>
 	* Military: timing and urgency
 	* Healthcare Insurance Fraud: Gather the collective knowledge
 	* Commericalize OpenData: domain knowledge is critical
-Requirments for successful data analytics:
-* Buy-in
-	* high-level leadership was supportive
-	* mid-level converted
-	* lower levels wanted to help
-* urgency
-* Transparency
-* Non-data science SMEs
-* Psychological Safety 
+	   
+* Requirments for successful data analytics:
+	* Buy-in
+		* high-level leadership was supportive
+		* mid-level converted
+		* lower levels wanted to help
+	* urgency
+	* Transparency
+	* Non-data science SMEs
+	* Psychological Safety 
 
 ### Apache Kylin 麒麟
 Intent: we need real-time streamming and OLAP for Big-Data.    
@@ -188,12 +188,11 @@ Hive 2.0
 user: eBay and PayPal
 too much marketing stuff, skip!! crazy!
 
-![Apache Eagle Architecture][5]   
-
 ### Kafka
 Joey from LinkedIn
-**very good presentation and slide design** <- learn from it.
-Agenda
+**very good presentation and slide design** <- learn from it.  
+
+Agenda   
 	* UseCases at LinkedIn
 	* Resilient infor
 
@@ -254,7 +253,6 @@ TMS (tile service)
 todo-find out more about open street editor
 
 ### Keynotes
-
 * Alan Gates from Hortonworks
 
 ODPi (Open Data Platform inititive)
@@ -266,16 +264,16 @@ Test once, run everywhere.
 make things easy, reduce friction.
 next 20years is AI, how to have more fun and less friction.
 
-** todo Install and learn juju and Ranch**   
-MAAS is for physical,
-LXD -> container
-cloud
-Scarcity is in Ops, free software is free but Operation becomes expensive.
+** todo: Install and learn juju and Ranch**   
+MAAS is for physical,   
+LXD -> container   
+cloud   
+Scarcity is in Ops, free software is free but Operation becomes relative expensive.
 
-write your own -> buy a sql db -> open source sql db -> big-data
+history = write your own -> buy a sql db -> open source sql db -> big-data
 
-chef is 70; write your own
-SaaS is really a buy decision
+chef is 70; write your own,   
+SaaS is really a buy decision,   
 architecture and Ops drives complexity higher, reduce complexity
 
 * Spark 2.0    
@@ -322,25 +320,23 @@ trover.d.grant@gmail.com
 
 ### Zeppelin
 
-%zarvis? load slides
-He button?
+%zarvis is a new plugin that load slides
+Helium button in new version, Helium is in beta, Zeppelin-533 ->recommend applicaiton to be used
 
 Zeppelin 548/549 has access control
 Zeppelin 702/208 support r and sparkr
 
-Proposal:
-UX design (Jerermy Anderson)
-Isolated Interpreter per notebook (scope)
-pass data with z.put("key", "value"), 
-graduation
+* Proposal:
+	* UX design (Jerermy Anderson)
+	* Isolated Interpreter per notebook (scope)
+	* pass data with z.put("key", "value"), 
 
-interpreter process has interpret group has interpreter
-interpreter -> open, close, interpret methods required
-jvm in different instance
-notebookRepoSync 
-Apache Shiro to do authentication
-Helium is in beta, Zeppelin-533 ->recommend applicaiton to be used
-mailling list, issue trader, github
+* interpreter process has interpret group has interpreter
+	* metnod for interpreter -> open, close, interpret methods required
+* jvm in different instance
+* notebookRepoSync 
+* Apache Shiro to do authentication
+* mailling list, issue trader, github
  
 ### MLlib 
 Databrick
@@ -496,9 +492,9 @@ Example:
 mesos abstract HW details    
 marathon abstract service
 
-microservices increases complexity, need to reduce friction
-decompose the app and create a service composition and routining, use logic name.
-real-time composition, use 
+* microservices increases complexity, need to reduce friction
+* decompose the app and create a service composition and routining, use logic name.
+* real-time composition
 
 [0]: http://events.linuxfoundation.org/
 [1]: http://openpowerfoundation.org/2015-summit/
@@ -517,7 +513,7 @@ real-time composition, use
 [14]: https://github.com/BuoyantIO/linkerd
 [15]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_092951.jpg 
 [16]: https://systemml.apache.org/
-[17]: ???
+[17]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_111251.jpg
 [18]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141629.jpg
 [19]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141440.jpg
 [20]: https://raw.githubusercontent.com/rkuo/NetworkOS/master/apache/apachecon2016/images/IMG_20160509_141517.jpg
