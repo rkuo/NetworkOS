@@ -1,16 +1,16 @@
 # OSCON 2016
-Richard Kuo, 20160516 in OSCON 2016, at Austin
+Richard Kuo, 20160516 in OSCON 2016, at Austin TX
 
 ## Reactive System Design
 Hands on with Akka and Java/Scala   
 Duncan K. DeVore from [Lightbend][1] formally Typesafe,   
 
-internal download server http:172.16.0.20 and code is hosted on github.org/ironfish
+internal download server http:172.16.0.20 and code is hosted on github.org/ironfish  
 [presentation slide][2], a [2-days workshop was presented in OSCON2015][3]
 
 ### what is Reactive?
 * distribute system
-* [peppered moth][4]->moth's programming <- environment changes which demand adjustment
+* [peppered moth][4]->moth's programming <- environment changes which demand adjustment. This is same as "Survival of the fittest".
 * point2point, fire and forget, be able to react to environment changes on-the-fly -> react to load, to failure, to users, **Reactive Application**
 * www.reactive manifesto.org, 
 * Principles
@@ -23,52 +23,55 @@ internal download server http:172.16.0.20 and code is hosted on github.org/ironf
 	* elastic - rebalance, up and down,    
 		* reactive to load, monitoring, and response. Some event are pre-determined, others unpredictable.
 		
-### Distributed Computing
-* Google and Amazon do not exist. IBM was the industry. Mainframes used centralized computeing model.
-* Cloud Computing is another paradigm shift, which focus on economics.
-	**software is business**, 
-	* storage, network, 
-* Fast fishs eat slow fishs. 
+### Distributed Computing  
+**paradigm shift**  
+
+* 30-40 years ago, Google and Amazon do not exist. IBM was the industry. Mainframes used centralized computeing model.   
+* Cloud Computing is another paradigm shift, which focus on economics. **software is business**.  
+* Fast (not big) fishs eat slow fishs.   
 
 ### AKKA is Reactive
-* Message Driven: elastice, resilient responsiveness
-* Elastic: responsive to varying workload
-* Resilient: system stays responisve in the face of failure
-* Responsive in timely manner
+* Message Driven: elastice, resilient responsiveness  
+* Elastic: responsive to varying workload  
+* Resilient: system stays responisve in the face of failure  
+* Responsive in timely manner  
 
-Value: Native distributed
-* Single Unified Programming 
-* Simpler concurrency
-* Simpler distribution
-* Simpler fault tolerance
+Value: Native distributed  
+ 
+* Single Unified Programming   
+* Simpler concurrency  
+* Simpler distribution   
+* Simpler fault tolerance  
 
 Distributed leads -> No-deterministic   
 Actor model (processing = behavior, storage = state)      
 review message pattern slide later, from messaging/mailbox/dequeue
 
-Actor may have mutable state:
-	* AKKA takes care of memory consisteccy
-	* Don't share mutalbe state
-	* actors exclusively communicate with message
-	* Message must be immutable.
+Actor may have mutable state:  
+
+* AKKA takes care of memory consisteccy
+* Don't share mutalbe state
+* actors exclusively communicate with message
+* Message must be immutable.  
 	
 AKKA does not use any global state.   
 AKKA system is like unix file structure, system plus multiple users
 
-for Java, actor is actor system.    
-for Scala, actor is in companion system.     
+* for Java, actor is actor system.    
+* for Scala, actor is in companion system.     
 
-Follow codes in slides:   
-creating an Actor: create props first.     
-communiction: "this.coffeeHose.tell"    
-scala has case class helps message creation.  
+Follow codes in slides:  
+ 
+* creating an Actor: create props first.     
+* communiction: "this.coffeeHose.tell"    
+* scala has case class helps message creation.  
 
-Context:
+Context:   
+
 * each actor has a context
 
 ## Cloud Native Java 
-Kenny Bastani (Pivotal), very knowledgeable person
-He is co-authoring a book with Josh for O'reilly
+Kenny Bastani (Pivotal), very knowledgeable person; he is co-authoring a book with Josh for O'reilly.  
 [Lab instruction][5]   
 **use 12 Factors as part of design pattern for microservice**
 
@@ -179,7 +182,7 @@ from("rjsonText")
 
 ## Keynotes
 
-* Incremental Revolution
+### Incremental Revolution
 Siman from Docker
 
 Open = inclusive, help each other, share.   
@@ -192,24 +195,24 @@ Open = inclusive, help each other, share.
 		* open source is good for challengers:   
 		* it is a David's slingshot, what you aim for is up to you.  
 
-problems of Docker on Mac:
+* problems of Docker on Mac:  
+
 	* to complicated to install
 	* file sharing does not work
 	* network
 	* virtualbox is buggy
 
-Check Open Container
+	**Check Open Container**
 
-How
-make it seamless
+* How -> make it seamless
 
 unikernel 
-
+Open source 
 hyperkit
 vpnkit
 datakit
 
-* IBM
+###  IBM
 vp of cloud and technology
 Angel Dias
 
@@ -382,20 +385,16 @@ kvm
 fix black mac, 
 
 
-==
-Unikernels and Docker:
-From Revolution to Evolution
-Richard 
+### Unikernels and Docker:
+Richard From Revolution 
+to Evolution
 
 Next Trillion CPUs -> Trillion Problems
 - inherit exist system issues
 - no profession magmt
 - connected to netwrok
 
-Must to intrinsically robust
-
-
-New Devices, old software
+Must to intrinsically robust, New Devices, old software
 
 ### get his slide study it
 
@@ -419,21 +418,10 @@ Unikernels steps remain
 - deployment, cloud, image mag
 - ease of build
 
-
-check open container
-
-docker on raspberry pi
-
-docker for mac
-
-
-
-
 github.com/docker/hyperkit, vpnkit, datakit
 
 cloud9, everything is file 
 att lab
-
 
 everything is a library
 
